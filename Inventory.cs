@@ -129,7 +129,7 @@ namespace InventorySystem
                         Console.Write("Enter the item's quantity: ");
                         int quantity = int.Parse(Console.ReadLine());
                         Console.Write("Enter the item's price: ");
-                        double price = double.Parse(console.ReadLine());
+                        double price = double.Parse(Console.ReadLine());
 
                         // Add the new item to the inventory
                         Item item = new Item(name, quantity, price);
@@ -140,7 +140,7 @@ namespace InventorySystem
                         Console.Write("Enter the item's name: ");
                         name = Console.ReadLine();
                         Console.Write("Enter the quantity to add: ");
-                        quantity = int.Parse(console.ReadLine());
+                        quantity = int.Parse(Console.ReadLine());
 
                         // Update the quantity of the item
                         inventory.UpdateQuantity(name, quantity);
