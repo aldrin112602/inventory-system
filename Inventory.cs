@@ -21,6 +21,7 @@ namespace InventorySystem
                 if (items[i] == null)
                 {
                     items[i] = item;
+                    Console.WriteLine("Item added success!");
                     return;
                 }
             }
@@ -45,12 +46,17 @@ namespace InventorySystem
         public void DisplayInventory()
         {
             Console.WriteLine("Current inventory: ");
+            bool empty = false;
             for (int i = 0; i < items.Length; i++)
             {
                 if (items[i] != null)
                 {
                     Console.WriteLine(items[i].ToString());
+                    empty = true;
                 }
+            }
+            if(!empty) {
+                Console.WriteLine("Empty, please add item");
             }
         }
     }
@@ -104,10 +110,11 @@ namespace InventorySystem
 
             // Loop until the user chooses to exit
             bool exit = false;
+            Console.WriteLine("\n\n--------------- Inventory System ---------------");
             while (!exit)
             {
                 // Display the menu and prompt the user for a choice
-                Console.WriteLine("Inventory System");
+                Console.WriteLine("\n\nMain Menu: ");
                 Console.WriteLine("1. View inventory");
                 Console.WriteLine("2. Add item");
                 Console.WriteLine("3. Update quantity");
@@ -147,6 +154,7 @@ namespace InventorySystem
                         break;
                     case "4":
                         // Set the exit flag to true to end the loop
+                        Console.WriteLine("Thank you for using the program!");
                         exit = true;
                         break;
                     default:
